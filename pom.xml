@@ -4,26 +4,10 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.vinod</groupId>
 	<artifactId>courseprojects</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
 	<packaging>war</packaging>
 	<build>
 		<finalName>courseprojects</finalName>
-	<plugins>
-		<plugin>
-			<artifactId>maven-compiler-plugin</artifactId>
-			<configuration>
-				<source>1.7</source>
-				<target>1.7</target>
-			</configuration>
-		</plugin>
-		<plugin>
-			<artifactId>maven-war-plugin</artifactId>
-			<configuration>
-				<warSourceDirectory>WebContent</warSourceDirectory>
-				<failOnMissingWebXml>false</failOnMissingWebXml>
-			</configuration>
-		</plugin>
-	</plugins>
+
 	</build>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
@@ -34,12 +18,18 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+		<start-class>courseprojects.CourseMain</start-class>
 	</properties>
 
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-tomcat</artifactId>
+			<scope>provided</scope>
 		</dependency>
 	</dependencies>
 </project>
