@@ -8,19 +8,22 @@
 	<packaging>war</packaging>
 	<build>
 		<finalName>courseprojects</finalName>
-		<plugins>
-			<plugin>
-				<artifactId>maven-clean-plugin</artifactId>
-				<version>3.1.0</version>
-				<configuration>
-					<filesets>
-						<fileset>
-							<directory>src/main/webapp/assets</directory>
-						</fileset>
-					</filesets>
-				</configuration>
-			</plugin>
-		</plugins>
+	<plugins>
+		<plugin>
+			<artifactId>maven-compiler-plugin</artifactId>
+			<configuration>
+				<source>1.7</source>
+				<target>1.7</target>
+			</configuration>
+		</plugin>
+		<plugin>
+			<artifactId>maven-war-plugin</artifactId>
+			<configuration>
+				<warSourceDirectory>WebContent</warSourceDirectory>
+				<failOnMissingWebXml>false</failOnMissingWebXml>
+			</configuration>
+		</plugin>
+	</plugins>
 	</build>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
